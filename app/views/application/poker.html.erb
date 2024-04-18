@@ -1,0 +1,19 @@
+<br /><br />
+<h2><%= @rounds.length %> hands played</h2>
+<br /><br />
+<h3>Winning Hands</h3>
+<br />
+<% @player_wins_count.each do |player, winning_hands| %>
+    Player <%= player %>: <%= winning_hands.length %>
+    <br />
+<% end %>
+<br /><br />
+<% @rounds.each_with_index do |round, i| %>
+    Hand <%= i + 1 %>
+
+    <% round.hands.sort.reverse.each_with_index do |hand, place| %>
+        <br />
+        <%= (place+1).ordinalize %>) Player <%= hand.player %>'s hand [<%= hand.to_s %>] with <%= hand.hand_strength_humanized %>
+    <% end %>
+    <hr />
+<% end %>
