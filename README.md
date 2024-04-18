@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Install dependencies `bundle install`
 
-Things you may want to cover:
+1. Boot your server `rake server`
 
-* Ruby version
+1. Go to `http://localhost:3000/poker` to view the results of the given hands.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. To run tests, run `rake spec`
